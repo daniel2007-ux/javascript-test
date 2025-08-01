@@ -9,6 +9,8 @@
  * @returns {number} The sum of a and b
  */
 function add(a, b) {
+  const sum = a + b;
+  return sum;
   // TODO: Return the sum of a and b
   
 }
@@ -22,6 +24,8 @@ function add(a, b) {
  * @returns {number} The product of a and b
  */
 const multiply = (a, b) => {
+  const product = a * b;
+  return product;
   // TODO: Return the product of a and b
   
 };
@@ -34,6 +38,8 @@ const multiply = (a, b) => {
  * @returns {string} Greeting message in format "Hello, [name]!"
  */
 function greetUser(name = "Guest") {
+  const greeting = `Hello, ${name}!`;
+  return greeting;
   // TODO: Return a greeting message using the name parameter
   
 }
@@ -46,6 +52,8 @@ function greetUser(name = "Guest") {
  * @returns {number} The total price including tax
  */
 function calculateTotal(price, taxRate) {
+  const totalPrice = price + (price * taxRate);
+  return totalPrice;
   // TODO: Calculate and return the total price including tax
   // Formula: price + (price * taxRate)
   
@@ -59,6 +67,11 @@ function calculateTotal(price, taxRate) {
  * @returns {function} A function that increments and returns a counter
  */
 function createCounter() {
+  let counter = 0;
+  return function(){
+    counter += 1;
+    return counter;
+  }
   // TODO: Create a counter variable and return a function that increments it
   // Hint: Use closure to maintain the counter state
   
@@ -73,6 +86,11 @@ function createCounter() {
  * @returns {number[]} New array with processed numbers
  */
 function processNumbers(numbers, callback) {
+  const processedNumbers = [];
+  for (let i = 0; i < numbers.length; i++) {
+    processedNumbers.push(callback(numbers[i]));
+  }
+  return processedNumbers;
   // TODO: Create a new array by applying the callback to each number
   // Hint: Use a loop or array method like map()
   

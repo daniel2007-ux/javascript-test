@@ -10,8 +10,14 @@
  * - isEmployed: true
  */
 function createPersonInfo() {
+  const persons_info = {
+    name: "Alex Johnson",
+    age: 28,
+    city: 'New York',
+    isEmployed: true
+  }
+  return persons_info;
   // TODO: Create and return an object with the specified properties
-  
 }
 
 /**
@@ -22,6 +28,8 @@ function createPersonInfo() {
  * @returns {number} The calculated age
  */
 function calculateAge(birthYear) {
+  const currentYear = 2024;
+  return currentYear - birthYear;
   // TODO: Calculate age by subtracting birth year from 2024
   
 }
@@ -34,6 +42,8 @@ function calculateAge(birthYear) {
  * @returns {string} Full name in format "FirstName LastName"
  */
 function formatFullName(firstName, lastName) {
+  const name = firstName + " " + lastName;
+  return name;
   // TODO: Combine first and last name with a space between them
   
 }
@@ -45,8 +55,12 @@ function formatFullName(firstName, lastName) {
  * @returns {boolean} true if adult (18+), false otherwise
  */
 function checkAdult(age) {
+  if (age >= 18) {
+    return true;
+  }
+  return false;
   // TODO: Return true if age is 18 or greater, false otherwise
-  
+
 }
 
 /**
@@ -57,6 +71,8 @@ function checkAdult(age) {
  * @returns {number} Temperature in Fahrenheit
  */
 function convertTemperature(celsius) {
+  const fahrenheit = (celsius * 9/5) + 32;
+  return fahrenheit;
   // TODO: Convert Celsius to Fahrenheit using the formula
   
 }
@@ -69,6 +85,8 @@ function convertTemperature(celsius) {
  * @returns {string} Greeting in format "Good [timeOfDay], [name]!"
  */
 function createGreeting(name, timeOfDay) {
+  const greeting = `Good ${timeOfDay}, ${name}!`;
+  return greeting;
   // TODO: Create a greeting message using template literals or string concatenation
   
 }
